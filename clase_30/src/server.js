@@ -11,13 +11,6 @@ const server = express();
 server.use(express.json());
 
 server.get("/products", async (req, res) =>  {
-    // const products = await sequelize.query("select * from Products")
-
-    // const products = await Products.findAll()
-
-    // const pricegte = Number(req.query.pricegte)
-    // const products = await Products.findAll({attributes: ["Name", "Price"]})
-
     const pricegte = Number(req.query.pricegte)
     const priceorder = req.query.priceorder
     const products = await Products.findAll({
@@ -29,10 +22,6 @@ server.get("/products", async (req, res) =>  {
 })
 
 server.get("/products/:productid", async (req, res) =>  {
-    // const product = await Products.findOne({where: { ID : { [Op.eq]: req.params.productid } } })
-
-    // const product = await Products.findOne({where: { ID : req.params.productid }})
-
     const product = await Products.findByPk(req.params.productid)
 
     res.status(200).send(product);

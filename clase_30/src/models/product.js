@@ -1,21 +1,21 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../conexion/connection');
+const sequelize = require('../conection/connection');
 
 const Products = sequelize.define('Products', {
-    ProductID: {
+    ID: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    ProductName: {
+    Name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    UnitPrice: {
+    Price: {
       type: DataTypes.DOUBLE,
       allowNull: false,
     },
-    UnitsInStock: {
+    Stock: {
       type: DataTypes.SMALLINT,
       allowNull: false,
     },  
@@ -28,4 +28,4 @@ const Products = sequelize.define('Products', {
   timestamps: false,
 });
 
-module.exports = Products;
+module.exports = Products;clase_28/.env

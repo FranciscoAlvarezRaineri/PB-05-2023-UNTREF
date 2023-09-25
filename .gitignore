@@ -1,2 +1,5 @@
 # Dependency directories
 proyecto_integrador_2/
+
+.env
+node_modules
