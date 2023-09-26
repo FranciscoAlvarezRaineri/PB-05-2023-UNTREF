@@ -28,4 +28,4 @@ const Products = sequelize.define('Products', {
   timestamps: false,
 });
 
-module.exports = Products;clase_28/.env
+module.exports = Products;
